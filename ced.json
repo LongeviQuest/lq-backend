@@ -1,0 +1,13 @@
+{
+  "projectId": "lq-data-platform",
+  "defaultEnvironment": "development",
+  "subsystemId": "backend",
+  "config": {
+    "path": "./src/configuration.ts",
+    "format": "esModule"
+  },
+  "build": {
+    "steps": [],
+    "artifact": "."
+  }
+}

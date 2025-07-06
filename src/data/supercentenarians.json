@@ -1,0 +1,2646 @@
+{
+  "women": [
+    {
+      "general": {
+        "rank": "1",
+        "name": "Jeanne Calment",
+        "age": {
+          "years": "122",
+          "days": "164"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "1-3 siblings",
+        "children": "1-2",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Past age 100"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand independently"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "2",
+        "name": "Kane Tanaka",
+        "age": {
+          "years": "119",
+          "days": "107"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "<20",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "3",
+        "name": "Sarah Knauss",
+        "age": {
+          "years": "119",
+          "days": "97"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "1-2",
+        "survived_children": "No"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "4",
+        "name": "Lucile Randon",
+        "age": {
+          "years": "118",
+          "days": "340"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "1-3 siblings",
+        "children": "None",
+        "survived_children": "No Children"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Never Married",
+        "length_of_first_marriage": "Never Married",
+        "number_of_marriages": "Never Married",
+        "age_widowed": "Never Married"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "5",
+        "name": "Nabi Tajima",
+        "age": {
+          "years": "117",
+          "days": "260"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "Data Unavailable",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "6",
+        "name": "Marie-Louise Meilleur",
+        "age": {
+          "years": "117",
+          "days": "230"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "5-30",
+        "number_of_marriages": "2",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "When younger"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand independently"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk independently"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "7",
+        "name": "Violet Brown",
+        "age": {
+          "years": "117",
+          "days": "189"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "1-3 siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "<20",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "8",
+        "name": "Emma Morano",
+        "age": {
+          "years": "117",
+          "days": "137"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "1-2",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand with help",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Able to walk with help",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "9",
+        "name": "Chiyo Miyako",
+        "age": {
+          "years": "117",
+          "days": "81"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "1-2",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "5-30",
+        "number_of_marriages": "1",
+        "age_widowed": "<65"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "3+"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk with help",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "10",
+        "name": "Delphia Welford",
+        "age": {
+          "years": "117",
+          "days": "66"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "1-2",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Never Married",
+        "length_of_first_marriage": "Never Married",
+        "number_of_marriages": "Never Married",
+        "age_widowed": "Never Married"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "11",
+        "name": "María Branyas Morera",
+        "age": {
+          "years": "117",
+          "days": "41"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "1-3 siblings",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "12",
+        "name": "Misao Okawa",
+        "age": {
+          "years": "117",
+          "days": "27"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "5-30",
+        "number_of_marriages": "1",
+        "age_widowed": "<65"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "13",
+        "name": "Fracisca Celsa dos Santos",
+        "age": {
+          "years": "116",
+          "days": "349"
+        },
+        "continent": "South America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "14",
+        "name": "Maria Capovilla",
+        "age": {
+          "years": "116",
+          "days": "347"
+        },
+        "continent": "South America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "<65"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "When younger",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand independently"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk independently"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "15",
+        "name": "Susannah Mushatt Jones",
+        "age": {
+          "years": "116",
+          "days": "311"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "None",
+        "survived_children": "No Children"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "<5 Years",
+        "number_of_marriages": "1",
+        "age_widowed": "Divorced"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "16",
+        "name": "Gertrude Weaver",
+        "age": {
+          "years": "116",
+          "days": "276"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "<20",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "17",
+        "name": "Fusa Tatsumi",
+        "age": {
+          "years": "116",
+          "days": "231"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "4+ siblings",
+        "children": "Data Unavailable",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "<65"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "18",
+        "name": "Antonia da Santa Cruz",
+        "age": {
+          "years": "116",
+          "days": "224"
+        },
+        "continent": "South America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "Data Unavailable",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "19",
+        "name": "Tane Ikai",
+        "age": {
+          "years": "116",
+          "days": "175"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "3-4",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "5-30",
+        "number_of_marriages": "1",
+        "age_widowed": "Divorced"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Able to walk with help",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "20",
+        "name": "Jeanne Bot",
+        "age": {
+          "years": "116",
+          "days": "128"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "None",
+        "survived_children": "No Children"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Never Married",
+        "length_of_first_marriage": "Never Married",
+        "number_of_marriages": "Never Married",
+        "age_widowed": "Never Married"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "21",
+        "name": "Elizabeth Bolden",
+        "age": {
+          "years": "116",
+          "days": "118"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "One Parent (other died young/divorced/etc.)",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "<20",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "<65"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "22",
+        "name": "Besse Cooper",
+        "age": {
+          "years": "116",
+          "days": "100"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "No"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "23",
+        "name": "Maria Giuseppa Robucci",
+        "age": {
+          "years": "116",
+          "days": "90"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand independently"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "24",
+        "name": "Tekla Juniewicz",
+        "age": {
+          "years": "116",
+          "days": "70"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "1-3 siblings",
+        "children": "1-2",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "25",
+        "name": "Ana Vela Rubio",
+        "age": {
+          "years": "116",
+          "days": "47"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Never Married",
+        "length_of_first_marriage": "Never Married",
+        "number_of_marriages": "Never Married",
+        "age_widowed": "Never Married"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "26",
+        "name": "Giuseppina Projetto",
+        "age": {
+          "years": "116",
+          "days": "37"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "27",
+        "name": "Jeralean Talley",
+        "age": {
+          "years": "116",
+          "days": "25"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "1-2",
+        "survived_children": "No"
+      },
+      "marriage": {
+        "age_at_first_marriage": ">30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "28",
+        "name": "Eddie Ceccarelli",
+        "age": {
+          "years": "116",
+          "days": "17"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "1-2",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "2",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "When younger",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "29",
+        "name": "Shigeyo Nakachi",
+        "age": {
+          "years": "115",
+          "days": "345"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "1-2",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "<65"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "30",
+        "name": "Tomiko Itooka",
+        "age": {
+          "years": "115",
+          "days": "327"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "1-3 siblings",
+        "children": "3-4",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Data Unavailable"
+        }
+      }
+    }
+  ],
+  "men": [
+    {
+      "general": {
+        "rank": "1",
+        "name": "Jiroemon Kimura",
+        "age": {
+          "years": "116",
+          "days": "54"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "When younger",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand independently"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "2",
+        "name": "Christian Mortensen",
+        "age": {
+          "years": "115",
+          "days": "252"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "None",
+        "survived_children": "No Children"
+      },
+      "marriage": {
+        "age_at_first_marriage": ">30",
+        "length_of_first_marriage": "<5 Years",
+        "number_of_marriages": "1",
+        "age_widowed": "Divorced"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Past age 100"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "3",
+        "name": "Emiliano Mercado del Toro",
+        "age": {
+          "years": "115",
+          "days": "156"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "1-3 siblings",
+        "children": "None",
+        "survived_children": "No Children"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Never Married",
+        "length_of_first_marriage": "Never Married",
+        "number_of_marriages": "Never Married",
+        "age_widowed": "Never Married"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "No"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "When younger"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "4",
+        "name": "Juan Vicente Pérez Mora",
+        "age": {
+          "years": "114",
+          "days": "311"
+        },
+        "continent": "South America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "5",
+        "name": "Walter Breuning",
+        "age": {
+          "years": "114",
+          "days": "205"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "None",
+        "survived_children": "No Children"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "2",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Past age 100"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk independently"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "6",
+        "name": "Yukichi Chuganji",
+        "age": {
+          "years": "114",
+          "days": "189"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "When younger"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "7",
+        "name": "Joan Riudavets Moll",
+        "age": {
+          "years": "114",
+          "days": "81"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "One Parent (other died young/divorced/etc.)",
+        "siblings": "Data Unavailable",
+        "children": "Data Unavailable",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Past age 100"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand independently"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk independently"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "8",
+        "name": "Fred Hale",
+        "age": {
+          "years": "113",
+          "days": "354"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "<20",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand independently"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "9",
+        "name": "Israel Kristal",
+        "age": {
+          "years": "113",
+          "days": "330"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "One Parent (other died young/divorced/etc.)",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "5-30",
+        "number_of_marriages": "2",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "Yes"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "10",
+        "name": "Efraín Antonio Ríos García",
+        "age": {
+          "years": "113",
+          "days": "282"
+        },
+        "continent": "South America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "11",
+        "name": "Johnson Parks",
+        "age": {
+          "years": "113",
+          "days": "275"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "Data Unavailable",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "Data Unavailable",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "12",
+        "name": "Tomoji Tanabe",
+        "age": {
+          "years": "113",
+          "days": "274"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "No"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "13",
+        "name": "John McMorran",
+        "age": {
+          "years": "113",
+          "days": "250"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "1-3 siblings",
+        "children": "1-2",
+        "survived_children": "All"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "When younger",
+        "smoking": "When younger"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Wheelchair/bedridden"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "14",
+        "name": "Masazo Nonaka",
+        "age": {
+          "years": "113",
+          "days": "179"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "15",
+        "name": "Mauro Ambriz Tapia",
+        "age": {
+          "years": "113",
+          "days": "148"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "16",
+        "name": "Frederick Frazier",
+        "age": {
+          "years": "113",
+          "days": "138"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "Data Unavailable",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "Data Unavailable",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "17",
+        "name": "Eusebio Quintero López",
+        "age": {
+          "years": "113",
+          "days": "132"
+        },
+        "continent": "South America"
+      },
+      "family": {
+        "parents": "One Parent (other died young/divorced/etc.)",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "<65"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "18",
+        "name": "Wenceslao Leyva González",
+        "age": {
+          "years": "113",
+          "days": "90"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "19",
+        "name": "James Sisnett",
+        "age": {
+          "years": "113",
+          "days": "90"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "5-30",
+        "number_of_marriages": "2",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "None"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "20",
+        "name": "Domingo Villa Avisencio",
+        "age": {
+          "years": "113",
+          "days": "69"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "2",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "21",
+        "name": "Walter Richardson",
+        "age": {
+          "years": "113",
+          "days": "48"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "Data Unavailable",
+        "children": "None",
+        "survived_children": "No children"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "22",
+        "name": "Francisco Núñez Olivera",
+        "age": {
+          "years": "113",
+          "days": "47"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "Yes"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "23",
+        "name": "Henry Allingham",
+        "age": {
+          "years": "113",
+          "days": "42"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "One Parent (other died young/divorced/etc.)",
+        "siblings": "Data Unavailable",
+        "children": "1-2",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "Yes"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "When younger"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "24",
+        "name": "Emilio Flores Márquez",
+        "age": {
+          "years": "113",
+          "days": "4"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "3-4",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "25",
+        "name": "Chitetsu Watanabe",
+        "age": {
+          "years": "112",
+          "days": "355"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "Data Unavailable",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "26",
+        "name": "Antonio Todde",
+        "age": {
+          "years": "112",
+          "days": "346"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": ">30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": ">85"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "Yes"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Past age 100",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "27",
+        "name": "Saturnino de la Fuente García",
+        "age": {
+          "years": "112",
+          "days": "341"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "31-85",
+        "number_of_marriages": "1",
+        "age_widowed": "65-85"
+      },
+      "military": {
+        "military_service": "No",
+        "combat": "N/A"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "28",
+        "name": "Moses Hardy",
+        "age": {
+          "years": "112",
+          "days": "335"
+        },
+        "continent": "North America"
+      },
+      "family": {
+        "parents": "Two Parents",
+        "siblings": "4+ siblings",
+        "children": "5+",
+        "survived_children": "Some"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "1",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Yes",
+        "combat": "Yes"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Unable to walk"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "29",
+        "name": "Yasutaro Koide",
+        "age": {
+          "years": "112",
+          "days": "312"
+        },
+        "continent": "Asia"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "5+",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "Data Unavailable",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "Data Unavailable",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Data Unavailable",
+        "smoking": "Data Unavailable"
+      },
+      "health_issues": {
+        "major_illnesses": "Data Unavailable"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        },
+        "walking": {
+          "age_100": "Data Unavailable",
+          "age_110": "Data Unavailable"
+        }
+      }
+    },
+    {
+      "general": {
+        "rank": "30",
+        "name": "John Evans",
+        "age": {
+          "years": "112",
+          "days": "295"
+        },
+        "continent": "Europe"
+      },
+      "family": {
+        "parents": "Data Unavailable",
+        "siblings": "Data Unavailable",
+        "children": "3-4",
+        "survived_children": "Data Unavailable"
+      },
+      "marriage": {
+        "age_at_first_marriage": "20-30",
+        "length_of_first_marriage": "Data Unavailable",
+        "number_of_marriages": "Data Unavailable",
+        "age_widowed": "Data Unavailable"
+      },
+      "military": {
+        "military_service": "Data Unavailable",
+        "combat": "Data Unavailable"
+      },
+      "risky_habits": {
+        "alcohol_consumption": "Never",
+        "smoking": "Never"
+      },
+      "health_issues": {
+        "major_illnesses": "1-2"
+      },
+      "activities_of_daily_living": {
+        "standing": {
+          "age_100": "Able to stand independently",
+          "age_110": "Able to stand with help"
+        },
+        "walking": {
+          "age_100": "Able to walk independently",
+          "age_110": "Able to walk with help"
+        }
+      }
+    }
+  ]
+}
