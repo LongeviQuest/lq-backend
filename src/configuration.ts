@@ -6,6 +6,6 @@ export const configuration = {
     connectionString:
       'mongodb+srv://benmeyers:LQMongo25@dbcluster.s9ntpg6.mongodb.net/?retryWrites=true&w=majority&appName=dbcluster',
     name: 'Supercentenarians',
-    table: 'human_new',
+    table: 'human',
   },
 };
