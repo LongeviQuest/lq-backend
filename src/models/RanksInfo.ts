@@ -7,4 +7,6 @@ export interface RanksInfo {
   countryLiving?: string | number;
   genderLiving?: string | number;
   worldLiving?: string | number;
+  ageInYears?: string | number;
+  ageInDays?: string | number;
 }
