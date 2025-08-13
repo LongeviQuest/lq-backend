@@ -407,6 +407,7 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
       world: '',
       countryName: '',
       genderName: '',
+      ageInYears:'',
     };
     const slug = req.params.slug;
     const { human: content } = collections;
@@ -468,6 +469,8 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
       country: countryIndex,
       gender: genderIndex,
       world: worldIndex,
+      ageInYears:sc[0].time_components?.years,
+      ageInDays:sc[0].time_components?.days,
     };
 
     if (!personalInfo.is_dead) {
@@ -529,6 +532,7 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
         countryLiving: livingCountryIndex,
         genderLiving: livingGenderIndex,
         worldLiving: livingWorldIndex,
+        ageInYears:sc[0].ageInYears,
       };
     }
 
