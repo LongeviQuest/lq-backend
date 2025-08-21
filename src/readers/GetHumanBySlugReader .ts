@@ -54,7 +54,7 @@ export class GetHumanSlugReader extends MongoDbReader<string, Human[]> {
                     '$birthDate',
                   ],
                 },
-                1000 * 60 * 60 * 24 * 365,
+                1000 * 60 * 60 * 24 * 365.2425,
               ],
             },
             roundedAgeInYears: {
