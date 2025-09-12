@@ -426,7 +426,6 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
       res.status(204).send({});
       return;
     }
-
     const allSC = await getAllSC.execute();
     if (!allSC) {
       res.status(404).send('Could not fetch world Supercentenarians');
@@ -444,7 +443,7 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
       req.query,
       personalInfo.nationality.slug
     );
-
+    
     const scByGender = (await transformOutput(genderCursor)) as Human[];
     if (!scByGender) {
       res.status(404).send('Could not fetch Supercentenarian by gender');
@@ -456,11 +455,10 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
       res.status(404).send('Could not fetch Supercentenarian by country');
       return;
     }
-
+    
     const worldIndex = allSC.findIndex(sc => sc.slug === slug) + 1;
     const genderIndex = scByGender.findIndex(human => human.slug === slug) + 1;
-    const countryIndex =
-      scByCountry.findIndex(human => human.slug === slug) + 1;
+    const countryIndex = scByCountry.findIndex(human => human.slug === slug) + 1;
 
     rankings = {
       ...rankings,
@@ -471,8 +469,7 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
       world: worldIndex,
       ageInYears:sc[0].time_components?.years,
       ageInDays:sc[0].time_components?.days,
-    };
-
+    }; 
     if (!personalInfo.is_dead) {
       const getAllLivingSC = new GetSupercentenariansQuery(
         req.query,
@@ -532,7 +529,6 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
         countryLiving: livingCountryIndex,
         genderLiving: livingGenderIndex,
         worldLiving: livingWorldIndex,
-        ageInYears:sc[0].ageInYears,
       };
     }
 
