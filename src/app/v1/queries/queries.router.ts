@@ -25,6 +25,7 @@ import {
   getSupercentenariansByGender,
   getSupercentenariansByEmigration,
   getSupercentenariansCountByPrefecture,
+  getSupercentenariansByPrefecture,
 } from '../../../tools/aggregations';
 import {
   queryBuilder,
@@ -378,6 +379,31 @@ router.get(
       const cursor = await getSupercentenariansCountByPrefecture(
         content,
         nationality
+      );
+      const result: [] = await transformOutput(cursor);
+      return exportData(req, res, result);
+    } catch (error) {
+      res.json({ error: `${error}` });
+    }
+  }
+);
+
+router.get(
+  '/supercentenarians/prefecture/:nationality/:prefecture',
+  async (req: Request, res: Response) => {
+    try {
+      const input = req.query;
+      const { human: content } = collections;
+      let nationality = req.params.nationality.toLowerCase().replace(/\s+/g, '-');
+      if (nationality === 'united-states') {
+        nationality = 'usa';
+      };
+      const prefecture = req.params.prefecture.toLowerCase();
+      const cursor = await getSupercentenariansByPrefecture(
+        content,
+        input,
+        nationality,
+        prefecture
       );
       const result: [] = await transformOutput(cursor);
       return exportData(req, res, result);
