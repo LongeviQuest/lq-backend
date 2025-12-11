@@ -826,97 +826,11 @@ export const getSupercentenariansCountByPrefecture = async (
     {
       $group: {
         _id: {
-          $ifNull: [
-            {
-              $cond: {
-                if: {
-                  $regexMatch: {
-                    input: {
-                      $arrayElemAt: [
-                        {
-                          $split: [
-                            '$acf.personal_information.death_place.city',
-                            ', ',
-                          ],
-                        },
-                        1,
-                      ],
-                    },
-                    regex: /Prefecture/,
-                  },
-                },
-                then: {
-                  $trim: {
-                    input: {
-                      $replaceOne: {
-                        input: {
-                          $arrayElemAt: [
-                            {
-                              $split: [
-                                '$acf.personal_information.death_place.city',
-                                ', ',
-                              ],
-                            },
-                            1,
-                          ],
-                        },
-                        find: ' Prefecture',
-                        replacement: '',
-                      },
-                    },
-                  },
-                },
-                else: 'Unknown',
-              },
-            },
-            {
-              $cond: {
-                if: {
-                  $regexMatch: {
-                    input: {
-                      $arrayElemAt: [
-                        {
-                          $split: [
-                            '$acf.personal_information.death_place.city',
-                            ', ',
-                          ],
-                        },
-                        1,
-                      ],
-                    },
-                    regex: /Prefecture/,
-                  },
-                },
-                then: {
-                  $trim: {
-                    input: {
-                      $replaceOne: {
-                        input: {
-                          $arrayElemAt: [
-                            {
-                              $split: [
-                                '$acf.personal_information.residence.city',
-                                ', ',
-                              ],
-                            },
-                            1,
-                          ],
-                        },
-                        find: ' Prefecture',
-                        replacement: '',
-                      },
-                    },
-                  },
-                },
-                else: 'Unknown',
-              },
-            },
-          ],
+          $ifNull: ['$acf.personal_information.prefecture', 'Unknown'],
         },
         count: { $count: {} },
       },
     },
     { $sort: { _id: -1 } },
   ]);
-  // Repeated due to unknown character:  Hyōgo
 };
