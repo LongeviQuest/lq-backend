@@ -94,12 +94,13 @@ const getCountryOfBirthMatchValue = (value: any): Object[] => {
 
 const getPrefectureMatchValue = (value: any): Object[] => {
   return [
-    {
-      $or: [
-        { 'acf.personal_information.prefecture': { $regex: value, $options: 'i' } },
-        { 'acf.personal_information.state': { $regex: value, $options: 'i' } },
-      ],
-    },
+    { 'acf.personal_information.prefecture': { $regex: value, $options: 'i' } },
+  ];
+};
+
+const getStateMatchValue = (value: any): Object[] => {
+  return [
+    { 'acf.personal_information.state': { $regex: value, $options: 'i' } },
   ];
 };
 
@@ -293,6 +294,7 @@ const filterRegistry = new Map<string, (value: any) => Object[]>([
   ['gender', (value: any) => getGenderMatchValue(value)],
   ['name', (value: any) => getNameMatchValue(value)],
   ['prefecture', (value: any) => getPrefectureMatchValue(value)],
+  ['state', (value: any) => getStateMatchValue(value)],
 ]);
 
 const complexFilterRegistry = new Map<string, (value: any) => Object[]>([
