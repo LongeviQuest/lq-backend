@@ -427,145 +427,120 @@ router.get('/supercentenarians/men', async (req: Request, res: Response) => {
 
 router.get('/rankings/:slug', async (req: Request, res: Response) => {
   try {
-    let rankings: RanksInfo = {
-      country: '',
-      gender: '',
-      world: '',
-      countryName: '',
-      genderName: '',
-      ageInYears:'',
-    };
     const slug = req.params.slug;
     const { human: content } = collections;
-    const getSC = new GetHumanBySlugQuery(slug);
-    const getAllSC = new GetSupercentenariansQuery(req.query, true);
 
+    const getSC = new GetHumanBySlugQuery(slug);
     const sc = await getSC.execute();
-    if (!sc) {
+
+    if (!sc || !sc[0]) {
       res.status(404).send('Could not fetch Supercentenarian by slug');
       return;
     }
 
-    const personalInfo = sc[0].acf.personal_information;
+    const person = sc[0];
+    const personalInfo = person.acf.personal_information;
 
-    if (sc[0].ageInYears && sc[0].ageInYears < 110) {
+    if (person.ageInYears && person.ageInYears < 110) {
       res.status(204).send({});
       return;
     }
-    const allSC = await getAllSC.execute();
-    if (!allSC) {
-      res.status(404).send('Could not fetch world Supercentenarians');
+    const targetAge = person.total_milliseconds || person.acf.personal_information.ageInMilliseconds;
+
+    if (!targetAge) {
+      res.status(500).send('Could not calculate age for ranking');
       return;
     }
 
-    const genderCursor = await getSupercentenariansByGender(
-      content,
-      req.query,
-      personalInfo.sex.name,
-      true
-    );
-    const countryCursor = await getLivingSupercentenariansByCountry(
-      content,
-      req.query,
-      personalInfo.nationality.slug
-    );
-    
-    const scByGender = (await transformOutput(genderCursor)) as Human[];
-    if (!scByGender) {
-      res.status(404).send('Could not fetch Supercentenarian by gender');
-      return;
-    }
+    const countBetterRanks = async (filters: any) => {
+      const result = await content?.aggregate([
+        {
+          $addFields: {
+            ageInMilliseconds: {
+              $cond: {
+                if: { $eq: ['$acf.personal_information.is_dead', false] },
+                then: {
+                  $subtract: [new Date(), { $toDate: '$acf.personal_information.birth' }],
+                },
+                else: {
+                  $subtract: [
+                    { $toDate: '$acf.personal_information.date_of_death' },
+                    { $toDate: '$acf.personal_information.birth' },
+                  ],
+                },
+              },
+            },
+          },
+        },
+        {
+          $match: {
+            status: 'publish',
+            ageInMilliseconds: { $gt: targetAge },
+            ...filters,
+          },
+        },
+        {
+          $count: 'count',
+        },
+      ]).toArray();
 
-    const scByCountry = (await transformOutput(countryCursor)) as Human[];
-    if (!scByCountry) {
-      res.status(404).send('Could not fetch Supercentenarian by country');
-      return;
-    }
-    
-    const worldIndex = allSC.findIndex(sc => sc.slug === slug) + 1;
-    const genderIndex = scByGender.findIndex(human => human.slug === slug) + 1;
-    const countryIndex = scByCountry.findIndex(human => human.slug === slug) + 1;
+      return result.length > 0 ? result[0].count + 1 : 1;
+    };
 
-    rankings = {
-      ...rankings,
+    const worldRank = await countBetterRanks({
+      'acf.sc_validated': true,
+    });
+
+    const genderRank = await countBetterRanks({
+      'acf.sc_validated': true,
+      'acf.personal_information.sex.name': personalInfo.sex.name,
+    });
+
+    const countryRank = await countBetterRanks({
+      'acf.sc_validated': true,
+      'acf.personal_information.nationality.slug': personalInfo.nationality.slug,
+    });
+
+    let rankings: RanksInfo = {
       countryName: personalInfo.nationality.name,
       genderName: personalInfo.sex.name,
-      country: countryIndex,
-      gender: genderIndex,
-      world: worldIndex,
-      ageInYears:sc[0].time_components?.years,
-      ageInDays:sc[0].time_components?.days,
-    }; 
+      country: countryRank,
+      gender: genderRank,
+      world: worldRank,
+      ageInYears: person.time_components?.years,
+      ageInDays: person.time_components?.days,
+    };
+
     if (!personalInfo.is_dead) {
-      const getAllLivingSC = new GetSupercentenariansQuery(
-        req.query,
-        true,
-        true
-      );
+      const worldLivingRank = await countBetterRanks({
+        'acf.sc_validated': true,
+        'acf.personal_information.is_dead': false,
+      });
 
-      const genderLivingCursor = await getSupercentenariansByGender(
-        content,
-        req.query,
-        personalInfo.sex.name,
-        true,
-        true
-      );
+      const genderLivingRank = await countBetterRanks({
+        'acf.sc_validated': true,
+        'acf.personal_information.is_dead': false,
+        'acf.personal_information.sex.name': personalInfo.sex.name,
+      });
 
-      const countryLivingCursor = await getLivingSupercentenariansByCountry(
-        content,
-        req.query,
-        personalInfo.nationality.slug,
-        true
-      );
-
-      const allLivingSC = await getAllLivingSC.execute();
-      if (!allLivingSC) {
-        res.status(404).send('Could not fetch living world Supercentenarians');
-        return;
-      }
-      const scLivingByGender = (await transformOutput(
-        genderLivingCursor
-      )) as Human[];
-      if (!scLivingByGender) {
-        res
-          .status(404)
-          .send('Could not fetch living Supercentenarian by gender');
-        return;
-      }
-
-      const scLivingByCountry = (await transformOutput(
-        countryLivingCursor
-      )) as Human[];
-      if (!scLivingByCountry) {
-        res
-          .status(404)
-          .send('Could not fetch living Supercentenarian by country');
-        return;
-      }
-
-      const livingWorldIndex =
-        allLivingSC.findIndex(sc => sc.slug === slug) + 1;
-      const livingGenderIndex =
-        scLivingByGender.findIndex(human => human.slug === slug) + 1;
-      const livingCountryIndex =
-        scLivingByCountry.findIndex(human => human.slug === slug) + 1;
+      const countryLivingRank = await countBetterRanks({
+        'acf.sc_validated': true,
+        'acf.personal_information.is_dead': false,
+        'acf.personal_information.nationality.slug': personalInfo.nationality.slug,
+      });
 
       rankings = {
         ...rankings,
-        countryLiving: livingCountryIndex,
-        genderLiving: livingGenderIndex,
-        worldLiving: livingWorldIndex,
+        countryLiving: countryLivingRank,
+        genderLiving: genderLivingRank,
+        worldLiving: worldLivingRank,
       };
-    }
-
-    if (worldIndex === 0 || genderIndex === 0 || countryIndex === 0) {
-      res.status(204).send({});
-      return;
     }
 
     res.send(rankings);
   } catch (error) {
-    res.json({ error: `${error}` });
+    console.error('Rankings endpoint error:', error);
+    res.status(500).json({ error: `${error}` });
   }
 });
 
