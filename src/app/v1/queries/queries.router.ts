@@ -475,7 +475,8 @@ router.get('/rankings/:slug', async (req: Request, res: Response) => {
         {
           $match: {
             status: 'publish',
-            ageInMilliseconds: { $gt: targetAge },
+            ageInMilliseconds: { $gte: targetAge },
+            slug: { $ne: slug },
             ...filters,
           },
         },
