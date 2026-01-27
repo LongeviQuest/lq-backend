@@ -5,7 +5,12 @@ import { Query } from './Query';
 import { configuration } from '../configuration';
 import QueryString from 'qs';
 
-export class GetSupercentenariansQuery extends Query<Human[]> {
+export type PaginatedResult = {
+  total: number;
+  data: Human[];
+};
+
+export class GetSupercentenariansQuery extends Query<PaginatedResult> {
   private reader: GetSupercentenariansReader;
   constructor(
     private filters: QueryString.ParsedQs,
@@ -22,13 +27,11 @@ export class GetSupercentenariansQuery extends Query<Human[]> {
   protected validate(): ValidationResult | undefined {
     return {};
   }
-  protected async executeQuery(): Promise<Human[]> {
-    return (
-      (await this.reader.read({
-        filters: this.filters,
-        showValidated: this.showValidated,
-        showLiving: this.showLiving,
-      })) ?? []
-    );
+  protected async executeQuery(): Promise<PaginatedResult> {
+    return await this.reader.read({
+      filters: this.filters,
+      showValidated: this.showValidated,
+      showLiving: this.showLiving,
+    });
   }
 }
