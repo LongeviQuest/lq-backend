@@ -1,5 +1,4 @@
 import { Document } from 'mongodb';
-import { MongoDbReader } from './MongoDbReader';
 import { configuration } from '../configuration';
 import { Human } from '../models/Human';
 import QueryString from 'qs';
@@ -9,23 +8,43 @@ import {
   getAllFilters,
   getSort,
 } from '../helpers/filter-helper';
+import { MongoDbHelper } from '../helpers/MongoDbHelper';
 
-interface GetSupercentenariansReaderArgument {
+type GetSupercentenariansReaderArgument = {
   filters: QueryString.ParsedQs;
   showValidated?: boolean;
   showLiving?: boolean;
-}
-export class GetSupercentenariansReader extends MongoDbReader<
-  GetSupercentenariansReaderArgument,
-  Human[]
-> {
-  protected getCollection(): string {
-    return configuration.database.table;
+};
+
+type PaginatedResult = {
+  total: number;
+  data: Human[];
+};
+
+export class GetSupercentenariansReader {
+  private mongoDbHelper: MongoDbHelper;
+
+  constructor(connectionString: string, databaseName: string) {
+    this.mongoDbHelper = new MongoDbHelper(connectionString, databaseName);
   }
-  public async executeRead(
+
+  public async read(args?: GetSupercentenariansReaderArgument): Promise<PaginatedResult> {
+    const collection = await this.mongoDbHelper.connectToDatabase(
+      configuration.database.table
+    );
+    const result = await this.executeRead(collection, args);
+    await this.mongoDbHelper.disconnectFromDatabase();
+    return result;
+  }
+
+  private async executeRead(
     collection: Document,
-    args: GetSupercentenariansReaderArgument
-  ): Promise<any[]> {
+    args?: GetSupercentenariansReaderArgument
+  ): Promise<PaginatedResult> {
+    if (!args) {
+      args = { filters: {} };
+    }
+
     const defaultFilter = {};
     const defaultValidatedFilter = {
       'acf.sc_validated': true,
@@ -37,12 +56,19 @@ export class GetSupercentenariansReader extends MongoDbReader<
     };
 
     const getDefaultFilters = () => {
-      if (args.showLiving) return defaultLivingFilter;
-      if (args.showValidated) return defaultValidatedFilter;
+      if (args!.showLiving) return defaultLivingFilter;
+      if (args!.showValidated) return defaultValidatedFilter;
       return defaultFilter;
     };
 
-    const cursor = await collection?.aggregate([
+    const page = parseInt(args.filters.page as string) || 1;
+    const limit = parseInt(args.filters.limit as string) || 25;
+
+    const validatedPage = page > 0 ? page : 1;
+    const validatedLimit = [10, 25, 50, 100].includes(limit) ? limit : 25;
+    const validatedSkip = (validatedPage - 1) * validatedLimit;
+
+    const result = await collection?.aggregate([
       ...getAgeInYears(),
       {
         $match: {
@@ -53,9 +79,25 @@ export class GetSupercentenariansReader extends MongoDbReader<
           ],
         },
       },
-      getSort(args.filters),
-      excludedFields,
-    ]);
-    return cursor;
+      {
+        $facet: {
+          metadata: [{ $count: 'total' }],
+          data: [
+            getSort(args.filters),
+            { $skip: validatedSkip },
+            { $limit: validatedLimit },
+            excludedFields,
+          ],
+        },
+      },
+    ]).toArray();
+
+    const total = result[0]?.metadata[0]?.total || 0;
+    const data = result[0]?.data || [];
+
+    return {
+      total: total,
+      data: data,
+    };
   }
 }

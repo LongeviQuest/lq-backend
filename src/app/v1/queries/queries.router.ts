@@ -1,4 +1,4 @@
-import { GetSupercentenariansQuery } from './../../../queries/GetSupercentenariansQuery';
+import { GetSupercentenariansQuery, PaginatedResult } from './../../../queries/GetSupercentenariansQuery';
 import express, { Request, Response } from 'express';
 import { Parser } from '@json2csv/plainjs';
 import {
@@ -38,15 +38,22 @@ import { RanksInfo } from '../../../models/RanksInfo';
 const router = express.Router();
 connectToDatabase();
 
-function exportData(req: Request, res: Response, result: object[]) {
+function exportData(req: Request, res: Response, result: PaginatedResult) {
   if (req.query.csv === '1') {
     const parser = new Parser({});
-    const csv = parser.parse(result);
+    const csv = parser.parse(result.data || []);
     res.attachment('data.csv').send(csv);
   } else {
+    const page = parseInt(req.query.page as string) || 1;
+    const limit = parseInt(req.query.limit as string) || 25;
+    const validatedLimit = [10, 25, 50, 100].includes(limit) ? limit : 25;
+
     res.json({
-      count: result.length,
-      content: result,
+      count: result.total,
+      content: result.data,
+      page: page,
+      limit: validatedLimit,
+      totalPages: Math.ceil(result.total / validatedLimit),
     });
   }
 }
