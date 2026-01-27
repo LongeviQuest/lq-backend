@@ -93,8 +93,8 @@ router.post('/search', async (req: Request, res: Response) => {
 
     const { human: content } = collections;
     const cursor = await content?.find(query);
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -104,8 +104,8 @@ router.get('/top-sc', async (req: Request, res: Response) => {
   try {
     const { human: content } = collections;
     const cursor = await getTopSc(content);
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -116,8 +116,8 @@ router.get('/all-living', async (req: Request, res: Response) => {
     const input = req.query;
     const { human: content } = collections;
     const cursor = await getAllLiving(content, input);
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -149,7 +149,7 @@ router.get('/sc-by-wp-id/:wpid', async (req: Request, res: Response) => {
       newContent['taxonomy_CauseOfDeath'] = 'N/A';
     }
 
-    return exportData(req, res, newContent);
+    return exportData(req, res, { total: 1, data: [newContent] });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -168,8 +168,8 @@ router.get(
         content,
         nationality
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -186,8 +186,8 @@ router.get(
       };
       const { human: content } = collections;
       const cursor = await getTopHumansByNationality(content, nationality);
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -209,8 +209,8 @@ router.get(
         input,
         nationality
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -222,8 +222,8 @@ router.get('/sc-by-date/:date', async (req: Request, res: Response) => {
     const date = req.params.validation_information_validation_date;
     const { human: content } = collections;
     const cursor = await getByValidationDate(content, date);
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -233,8 +233,8 @@ router.get('/women-top-sc', async (req: Request, res: Response) => {
   try {
     const { human: content } = collections;
     const cursor = await getTopHumansByGenderSc(content, 'Female');
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -244,8 +244,8 @@ router.get('/men-top-sc', async (req: Request, res: Response) => {
   try {
     const { human: content } = collections;
     const cursor = await getTopHumansByGenderSc(content, 'Male');
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -260,8 +260,8 @@ router.get('/birthday/:month', async (req: Request, res: Response) => {
     }
     const { human: content } = collections;
     const cursor = await getAllHumansByBirthdayMonth(content, numberMonth);
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -278,8 +278,8 @@ router.get(
         input,
         30
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -292,8 +292,8 @@ router.get(
     try {
       const { human: content } = collections;
       const cursor = await getRecentCentenarianValidations(content, 30);
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -307,8 +307,8 @@ router.get(
       const input = req.query;
       const { human: content } = collections;
       const cursor = await getSupercentenariansDiedRecently(content, input, 60);
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -335,8 +335,8 @@ router.post(
         .withAge(input.query.ageRanges)
         .build();
       const cursor = await performSearchOnSC(content, query);
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -352,8 +352,8 @@ router.get(
         content,
         60
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -366,8 +366,8 @@ router.get(
     try {
       const { human: content } = collections;
       const cursor = await getSupercentenariansCountByCountry(content);
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -387,8 +387,8 @@ router.get(
         content,
         nationality
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -412,8 +412,8 @@ router.get(
         nationality,
         prefecture
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -425,8 +425,8 @@ router.get('/supercentenarians/men', async (req: Request, res: Response) => {
     const input = req.query;
     const { human: content } = collections;
     const cursor = await getSupercentenariansByGender(content, input, 'Male');
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -557,8 +557,8 @@ router.get('/supercentenarians/women', async (req: Request, res: Response) => {
     const input = req.query;
     const { human: content } = collections;
     const cursor = await getSupercentenariansByGender(content, input, 'Female');
-    const result: [] = await transformOutput(cursor);
-    return exportData(req, res, result);
+    const data: Human[] = await transformOutput(cursor);
+    return exportData(req, res, { total: data.length, data });
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -568,7 +568,10 @@ router.get('/supercentenarians', async (req: Request, res: Response) => {
   try {
     const command = new GetSupercentenariansQuery(req.query);
     const result = await command.execute();
-    return exportData(req, res, result ?? []);
+    if (!result) {
+      return res.json({ error: 'No data found' });
+    }
+    return exportData(req, res, result);
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -585,8 +588,8 @@ router.get(
         input,
         true
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -604,8 +607,8 @@ router.get(
         input,
         false
       );
-      const result: [] = await transformOutput(cursor);
-      return exportData(req, res, result);
+      const data: Human[] = await transformOutput(cursor);
+      return exportData(req, res, { total: data.length, data });
     } catch (error) {
       res.json({ error: `${error}` });
     }
