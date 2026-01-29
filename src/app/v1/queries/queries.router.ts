@@ -115,9 +115,8 @@ router.get('/all-living', async (req: Request, res: Response) => {
   try {
     const input = req.query;
     const { human: content } = collections;
-    const cursor = await getAllLiving(content, input);
-    const data: Human[] = await transformOutput(cursor);
-    return exportData(req, res, { total: data.length, data });
+    const result = await getAllLiving(content, input);
+    return exportData(req, res, result);
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -204,13 +203,12 @@ router.get(
         nationality = 'usa';
       };
       const { human: content } = collections;
-      const cursor = await getLivingSupercentenariansByCountry(
+      const result = await getLivingSupercentenariansByCountry(
         content,
         input,
         nationality
       );
-      const data: Human[] = await transformOutput(cursor);
-      return exportData(req, res, { total: data.length, data });
+      return exportData(req, res, result);
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -273,13 +271,12 @@ router.get(
     try {
       const input = req.query;
       const { human: content } = collections;
-      const cursor = await getRecentSuperCentenarianValidations(
+      const result = await getRecentSuperCentenarianValidations(
         content,
         input,
         30
       );
-      const data: Human[] = await transformOutput(cursor);
-      return exportData(req, res, { total: data.length, data });
+      return exportData(req, res, result);
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -306,9 +303,8 @@ router.get(
     try {
       const input = req.query;
       const { human: content } = collections;
-      const cursor = await getSupercentenariansDiedRecently(content, input, 60);
-      const data: Human[] = await transformOutput(cursor);
-      return exportData(req, res, { total: data.length, data });
+      const result = await getSupercentenariansDiedRecently(content, input, 60);
+      return exportData(req, res, result);
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -406,14 +402,13 @@ router.get(
         nationality = 'usa';
       };
       const prefecture = req.params.prefecture.toLowerCase();
-      const cursor = await getSupercentenariansByPrefecture(
+      const result = await getSupercentenariansByPrefecture(
         content,
         input,
         nationality,
         prefecture
       );
-      const data: Human[] = await transformOutput(cursor);
-      return exportData(req, res, { total: data.length, data });
+      return exportData(req, res, result);
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -424,9 +419,8 @@ router.get('/supercentenarians/men', async (req: Request, res: Response) => {
   try {
     const input = req.query;
     const { human: content } = collections;
-    const cursor = await getSupercentenariansByGender(content, input, 'Male');
-    const data: Human[] = await transformOutput(cursor);
-    return exportData(req, res, { total: data.length, data });
+    const result = await getSupercentenariansByGender(content, input, 'Male');
+    return exportData(req, res, result);
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -556,9 +550,8 @@ router.get('/supercentenarians/women', async (req: Request, res: Response) => {
   try {
     const input = req.query;
     const { human: content } = collections;
-    const cursor = await getSupercentenariansByGender(content, input, 'Female');
-    const data: Human[] = await transformOutput(cursor);
-    return exportData(req, res, { total: data.length, data });
+    const result = await getSupercentenariansByGender(content, input, 'Female');
+    return exportData(req, res, result);
   } catch (error) {
     res.json({ error: `${error}` });
   }
@@ -583,13 +576,12 @@ router.get(
     try {
       const input = req.query;
       const { human: content } = collections;
-      const cursor = await getSupercentenariansByEmigration(
+      const result = await getSupercentenariansByEmigration(
         content,
         input,
         true
       );
-      const data: Human[] = await transformOutput(cursor);
-      return exportData(req, res, { total: data.length, data });
+      return exportData(req, res, result);
     } catch (error) {
       res.json({ error: `${error}` });
     }
@@ -602,13 +594,12 @@ router.get(
     try {
       const input = req.query;
       const { human: content } = collections;
-      const cursor = await getSupercentenariansByEmigration(
+      const result = await getSupercentenariansByEmigration(
         content,
         input,
         false
       );
-      const data: Human[] = await transformOutput(cursor);
-      return exportData(req, res, { total: data.length, data });
+      return exportData(req, res, result);
     } catch (error) {
       res.json({ error: `${error}` });
     }

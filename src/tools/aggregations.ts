@@ -7,6 +7,15 @@ import {
 } from '../helpers/filter-helper';
 import QueryString from 'qs';
 
+const getPaginationParams = (input: QueryString.ParsedQs) => {
+  const page = parseInt(input.page as string) || 1;
+  const limit = parseInt(input.limit as string) || 25;
+  const validatedPage = page > 0 ? page : 1;
+  const validatedLimit = [10, 25, 50, 100].includes(limit) ? limit : 25;
+  const skip = (validatedPage - 1) * validatedLimit;
+  return { page: validatedPage, limit: validatedLimit, skip };
+};
+
 export const getTopSc = async (content: Document | undefined) => {
   return await content
     ?.aggregate([
@@ -87,7 +96,9 @@ export const getAllLiving = async (
   content: Document | undefined,
   input: QueryString.ParsedQs
 ) => {
-  return await content?.aggregate([
+  const { skip, limit } = getPaginationParams(input);
+
+  const result = await content?.aggregate([
     ...getAgeInYears(),
     {
       $match: {
@@ -98,9 +109,23 @@ export const getAllLiving = async (
         ),
       },
     },
-    getSort(input),
-    excludedFields,
-  ]);
+    {
+      $facet: {
+        metadata: [{ $count: 'total' }],
+        data: [
+          getSort(input),
+          { $skip: skip },
+          { $limit: limit },
+          excludedFields,
+        ],
+      },
+    },
+  ]).toArray();
+
+  const total = result?.[0]?.metadata[0]?.total || 0;
+  const data = result?.[0]?.data || [];
+
+  return { total, data };
 };
 
 export const getTopHumansByGenderSc = async (
@@ -190,6 +215,8 @@ export const getSupercentenariansByGender = async (
   showValidated?: boolean,
   showLiving?: boolean
 ) => {
+  const { skip, limit } = getPaginationParams(input);
+
   const defaultValidatedFilter = {
     'acf.sc_validated': true,
     'acf.personal_information.sex.name': gender,
@@ -209,7 +236,7 @@ export const getSupercentenariansByGender = async (
     return defaultFilter;
   };
 
-  return await content?.aggregate([
+  const result = await content?.aggregate([
     ...getAgeInYears(),
     {
       $match: {
@@ -217,9 +244,23 @@ export const getSupercentenariansByGender = async (
         $and: getAllFilters(getDefaultFilters(), input),
       },
     },
-    getSort(input),
-    excludedFields,
-  ]);
+    {
+      $facet: {
+        metadata: [{ $count: 'total' }],
+        data: [
+          getSort(input),
+          { $skip: skip },
+          { $limit: limit },
+          excludedFields,
+        ],
+      },
+    },
+  ]).toArray();
+
+  const total = result?.[0]?.metadata[0]?.total || 0;
+  const data = result?.[0]?.data || [];
+
+  return { total, data };
 };
 
 export const getSupercentenariansByEmigration = async (
@@ -227,6 +268,8 @@ export const getSupercentenariansByEmigration = async (
   input: QueryString.ParsedQs,
   isEmigrant: boolean
 ) => {
+  const { skip, limit } = getPaginationParams(input);
+
   let matchExpression = null;
   if (isEmigrant) {
     matchExpression = {
@@ -247,7 +290,8 @@ export const getSupercentenariansByEmigration = async (
       },
     };
   }
-  return await content?.aggregate([
+
+  const result = await content?.aggregate([
     ...getAgeInYears(),
     {
       $match: {
@@ -255,9 +299,23 @@ export const getSupercentenariansByEmigration = async (
         $and: [...getAllFilters(matchExpression, input), matchExpression],
       },
     },
-    getSort(input),
-    excludedFields,
-  ]);
+    {
+      $facet: {
+        metadata: [{ $count: 'total' }],
+        data: [
+          getSort(input),
+          { $skip: skip },
+          { $limit: limit },
+          excludedFields,
+        ],
+      },
+    },
+  ]).toArray();
+
+  const total = result?.[0]?.metadata[0]?.total || 0;
+  const data = result?.[0]?.data || [];
+
+  return { total, data };
 };
 
 export const getByValidationDate = async (
@@ -584,6 +642,8 @@ export const getLivingSupercentenariansByCountry = async (
   nationality: string,
   showLiving?: boolean
 ) => {
+  const { skip, limit } = getPaginationParams(input);
+
   const defaultFilter = {
     'acf.sc_validated': true,
     'acf.personal_information.nationality.slug': nationality,
@@ -600,7 +660,7 @@ export const getLivingSupercentenariansByCountry = async (
     return defaultFilter;
   };
 
-  return await content?.aggregate([
+  const result = await content?.aggregate([
     ...getAgeInYears(),
     {
       $match: {
@@ -611,9 +671,23 @@ export const getLivingSupercentenariansByCountry = async (
         ],
       },
     },
-    getSort(input),
-    excludedFields,
-  ]);
+    {
+      $facet: {
+        metadata: [{ $count: 'total' }],
+        data: [
+          getSort(input),
+          { $skip: skip },
+          { $limit: limit },
+          excludedFields,
+        ],
+      },
+    },
+  ]).toArray();
+
+  const total = result?.[0]?.metadata[0]?.total || 0;
+  const data = result?.[0]?.data || [];
+
+  return { total, data };
 };
 
 export const getAllHumansByBirthdayMonth = async (
@@ -655,6 +729,8 @@ export const getRecentSuperCentenarianValidations = async (
   input: QueryString.ParsedQs,
   range: number
 ) => {
+  const { skip, limit } = getPaginationParams(input);
+
   let fromDate = new Date();
   fromDate.setDate(fromDate.getDate() - range);
   const defaultFilter = {
@@ -665,7 +741,8 @@ export const getRecentSuperCentenarianValidations = async (
       $lt: new Date(),
     },
   };
-  return await content?.aggregate([
+
+  const result = await content?.aggregate([
     ...getAgeInYears(),
     {
       $match: {
@@ -673,9 +750,23 @@ export const getRecentSuperCentenarianValidations = async (
         $and: getAllFilters(defaultFilter, input),
       },
     },
-    getSort(input, 'validation-date'),
-    excludedFields,
-  ]);
+    {
+      $facet: {
+        metadata: [{ $count: 'total' }],
+        data: [
+          getSort(input, 'validation-date'),
+          { $skip: skip },
+          { $limit: limit },
+          excludedFields,
+        ],
+      },
+    },
+  ]).toArray();
+
+  const total = result?.[0]?.metadata[0]?.total || 0;
+  const data = result?.[0]?.data || [];
+
+  return { total, data };
 };
 
 export const getRecentCentenarianValidations = async (
@@ -711,6 +802,8 @@ export const getSupercentenariansDiedRecently = async (
   input: QueryString.ParsedQs,
   range: number
 ) => {
+  const { skip, limit } = getPaginationParams(input);
+
   let fromDate = new Date();
   fromDate.setDate(fromDate.getDate() - range);
   const defaultFilter = {
@@ -720,7 +813,8 @@ export const getSupercentenariansDiedRecently = async (
       $lt: new Date(),
     },
   };
-  return await content?.aggregate([
+
+  const result = await content?.aggregate([
     ...getAgeInYears(),
     {
       $match: {
@@ -729,13 +823,27 @@ export const getSupercentenariansDiedRecently = async (
       },
     },
     {
-      $sort: {
-        'acf.personal_information.date_of_death': -1,
-        total_milliseconds: -1,
+      $facet: {
+        metadata: [{ $count: 'total' }],
+        data: [
+          {
+            $sort: {
+              'acf.personal_information.date_of_death': -1,
+              total_milliseconds: -1,
+            },
+          },
+          { $skip: skip },
+          { $limit: limit },
+          excludedFields,
+        ],
       },
     },
-    excludedFields,
-  ]);
+  ]).toArray();
+
+  const total = result?.[0]?.metadata[0]?.total || 0;
+  const data = result?.[0]?.data || [];
+
+  return { total, data };
 };
 
 export const performSearchOnSC = async (
@@ -842,6 +950,8 @@ export const getSupercentenariansByPrefecture = async (
   prefecture: string,
   showLiving?: boolean
 ) => {
+  const { skip, limit } = getPaginationParams(input);
+
   const defaultFilter = {
     'acf.sc_validated': true,
     'acf.personal_information.nationality.slug': nationality,
@@ -860,7 +970,7 @@ export const getSupercentenariansByPrefecture = async (
     return defaultFilter;
   };
 
-  return await content?.aggregate([
+  const result = await content?.aggregate([
     ...getAgeInYears(),
     {
       $match: {
@@ -871,7 +981,21 @@ export const getSupercentenariansByPrefecture = async (
         ],
       },
     },
-    getSort(input),
-    excludedFields,
-  ]);
+    {
+      $facet: {
+        metadata: [{ $count: 'total' }],
+        data: [
+          getSort(input),
+          { $skip: skip },
+          { $limit: limit },
+          excludedFields,
+        ],
+      },
+    },
+  ]).toArray();
+
+  const total = result?.[0]?.metadata[0]?.total || 0;
+  const data = result?.[0]?.data || [];
+
+  return { total, data };
 };
