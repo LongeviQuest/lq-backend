@@ -9,10 +9,11 @@ import QueryString from 'qs';
 
 const getPaginationParams = (input: QueryString.ParsedQs) => {
   const page = parseInt(input.page as string) || 1;
-  const limit = parseInt(input.limit as string) || 25;
+  const limitParam = Array.isArray(input.limit) ? input.limit[0] : input.limit;
+  const limit = limitParam === 'all' ? -1 : (parseInt(limitParam as string) || 100);
   const validatedPage = page > 0 ? page : 1;
-  const validatedLimit = [10, 25, 50, 100].includes(limit) ? limit : 25;
-  const skip = (validatedPage - 1) * validatedLimit;
+  const validatedLimit = [25, 50, 100, -1].includes(limit) ? limit : 100;
+  const skip = validatedLimit === -1 ? 0 : (validatedPage - 1) * validatedLimit;
   return { page: validatedPage, limit: validatedLimit, skip };
 };
 
@@ -98,7 +99,7 @@ export const getAllLiving = async (
 ) => {
   const { skip, limit } = getPaginationParams(input);
 
-  const result = await content?.aggregate([
+  const baseQuery = [
     ...getAgeInYears(),
     {
       $match: {
@@ -109,15 +110,31 @@ export const getAllLiving = async (
         ),
       },
     },
+  ];
+
+  if (limit === -1) {
+    const data = await content?.aggregate([
+      ...baseQuery,
+      getSort(input),
+      excludedFields,
+    ]).toArray();
+
+    return { total: data?.length || 0, data: data || [] };
+  }
+
+  const dataPipeline = [
+    getSort(input),
+    { $skip: skip },
+    { $limit: limit },
+    excludedFields,
+  ];
+
+  const result = await content?.aggregate([
+    ...baseQuery,
     {
       $facet: {
         metadata: [{ $count: 'total' }],
-        data: [
-          getSort(input),
-          { $skip: skip },
-          { $limit: limit },
-          excludedFields,
-        ],
+        data: dataPipeline,
       },
     },
   ]).toArray();
@@ -236,7 +253,7 @@ export const getSupercentenariansByGender = async (
     return defaultFilter;
   };
 
-  const result = await content?.aggregate([
+  const baseQuery = [
     ...getAgeInYears(),
     {
       $match: {
@@ -244,15 +261,31 @@ export const getSupercentenariansByGender = async (
         $and: getAllFilters(getDefaultFilters(), input),
       },
     },
+  ];
+
+  if (limit === -1) {
+    const data = await content?.aggregate([
+      ...baseQuery,
+      getSort(input),
+      excludedFields,
+    ]).toArray();
+
+    return { total: data?.length || 0, data: data || [] };
+  }
+
+  const dataPipeline = [
+    getSort(input),
+    { $skip: skip },
+    { $limit: limit },
+    excludedFields,
+  ];
+
+  const result = await content?.aggregate([
+    ...baseQuery,
     {
       $facet: {
         metadata: [{ $count: 'total' }],
-        data: [
-          getSort(input),
-          { $skip: skip },
-          { $limit: limit },
-          excludedFields,
-        ],
+        data: dataPipeline,
       },
     },
   ]).toArray();
@@ -291,7 +324,7 @@ export const getSupercentenariansByEmigration = async (
     };
   }
 
-  const result = await content?.aggregate([
+  const baseQuery = [
     ...getAgeInYears(),
     {
       $match: {
@@ -299,15 +332,31 @@ export const getSupercentenariansByEmigration = async (
         $and: [...getAllFilters(matchExpression, input), matchExpression],
       },
     },
+  ];
+
+  if (limit === -1) {
+    const data = await content?.aggregate([
+      ...baseQuery,
+      getSort(input),
+      excludedFields,
+    ]).toArray();
+
+    return { total: data?.length || 0, data: data || [] };
+  }
+
+  const dataPipeline = [
+    getSort(input),
+    { $skip: skip },
+    { $limit: limit },
+    excludedFields,
+  ];
+
+  const result = await content?.aggregate([
+    ...baseQuery,
     {
       $facet: {
         metadata: [{ $count: 'total' }],
-        data: [
-          getSort(input),
-          { $skip: skip },
-          { $limit: limit },
-          excludedFields,
-        ],
+        data: dataPipeline,
       },
     },
   ]).toArray();
@@ -660,7 +709,7 @@ export const getLivingSupercentenariansByCountry = async (
     return defaultFilter;
   };
 
-  const result = await content?.aggregate([
+  const baseQuery = [
     ...getAgeInYears(),
     {
       $match: {
@@ -671,15 +720,31 @@ export const getLivingSupercentenariansByCountry = async (
         ],
       },
     },
+  ];
+
+  if (limit === -1) {
+    const data = await content?.aggregate([
+      ...baseQuery,
+      getSort(input),
+      excludedFields,
+    ]).toArray();
+
+    return { total: data?.length || 0, data: data || [] };
+  }
+
+  const dataPipeline = [
+    getSort(input),
+    { $skip: skip },
+    { $limit: limit },
+    excludedFields,
+  ];
+
+  const result = await content?.aggregate([
+    ...baseQuery,
     {
       $facet: {
         metadata: [{ $count: 'total' }],
-        data: [
-          getSort(input),
-          { $skip: skip },
-          { $limit: limit },
-          excludedFields,
-        ],
+        data: dataPipeline,
       },
     },
   ]).toArray();
@@ -742,7 +807,7 @@ export const getRecentSuperCentenarianValidations = async (
     },
   };
 
-  const result = await content?.aggregate([
+  const baseQuery = [
     ...getAgeInYears(),
     {
       $match: {
@@ -750,15 +815,31 @@ export const getRecentSuperCentenarianValidations = async (
         $and: getAllFilters(defaultFilter, input),
       },
     },
+  ];
+
+  if (limit === -1) {
+    const data = await content?.aggregate([
+      ...baseQuery,
+      getSort(input, 'validation-date'),
+      excludedFields,
+    ]).toArray();
+
+    return { total: data?.length || 0, data: data || [] };
+  }
+
+  const dataPipeline = [
+    getSort(input, 'validation-date'),
+    { $skip: skip },
+    { $limit: limit },
+    excludedFields,
+  ];
+
+  const result = await content?.aggregate([
+    ...baseQuery,
     {
       $facet: {
         metadata: [{ $count: 'total' }],
-        data: [
-          getSort(input, 'validation-date'),
-          { $skip: skip },
-          { $limit: limit },
-          excludedFields,
-        ],
+        data: dataPipeline,
       },
     },
   ]).toArray();
@@ -814,7 +895,7 @@ export const getSupercentenariansDiedRecently = async (
     },
   };
 
-  const result = await content?.aggregate([
+  const baseQuery = [
     ...getAgeInYears(),
     {
       $match: {
@@ -822,20 +903,41 @@ export const getSupercentenariansDiedRecently = async (
         $and: [...getAllFilters(defaultFilter, input), defaultFilter],
       },
     },
+  ];
+
+  if (limit === -1) {
+    const data = await content?.aggregate([
+      ...baseQuery,
+      {
+        $sort: {
+          'acf.personal_information.date_of_death': -1,
+          total_milliseconds: -1,
+        },
+      },
+      excludedFields,
+    ]).toArray();
+
+    return { total: data?.length || 0, data: data || [] };
+  }
+
+  const dataPipeline = [
+    {
+      $sort: {
+        'acf.personal_information.date_of_death': -1,
+        total_milliseconds: -1,
+      },
+    },
+    { $skip: skip },
+    { $limit: limit },
+    excludedFields,
+  ];
+
+  const result = await content?.aggregate([
+    ...baseQuery,
     {
       $facet: {
         metadata: [{ $count: 'total' }],
-        data: [
-          {
-            $sort: {
-              'acf.personal_information.date_of_death': -1,
-              total_milliseconds: -1,
-            },
-          },
-          { $skip: skip },
-          { $limit: limit },
-          excludedFields,
-        ],
+        data: dataPipeline,
       },
     },
   ]).toArray();
@@ -970,7 +1072,7 @@ export const getSupercentenariansByPrefecture = async (
     return defaultFilter;
   };
 
-  const result = await content?.aggregate([
+  const baseQuery = [
     ...getAgeInYears(),
     {
       $match: {
@@ -981,15 +1083,31 @@ export const getSupercentenariansByPrefecture = async (
         ],
       },
     },
+  ];
+
+  if (limit === -1) {
+    const data = await content?.aggregate([
+      ...baseQuery,
+      getSort(input),
+      excludedFields,
+    ]).toArray();
+
+    return { total: data?.length || 0, data: data || [] };
+  }
+
+  const dataPipeline = [
+    getSort(input),
+    { $skip: skip },
+    { $limit: limit },
+    excludedFields,
+  ];
+
+  const result = await content?.aggregate([
+    ...baseQuery,
     {
       $facet: {
         metadata: [{ $count: 'total' }],
-        data: [
-          getSort(input),
-          { $skip: skip },
-          { $limit: limit },
-          excludedFields,
-        ],
+        data: dataPipeline,
       },
     },
   ]).toArray();

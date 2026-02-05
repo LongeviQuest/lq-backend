@@ -62,13 +62,14 @@ export class GetSupercentenariansReader {
     };
 
     const page = parseInt(args.filters.page as string) || 1;
-    const limit = parseInt(args.filters.limit as string) || 25;
+    const limitParam = Array.isArray(args.filters.limit) ? args.filters.limit[0] : args.filters.limit;
+    const limit = limitParam === 'all' ? -1 : (parseInt(limitParam as string) || 100);
 
     const validatedPage = page > 0 ? page : 1;
-    const validatedLimit = [10, 25, 50, 100].includes(limit) ? limit : 25;
-    const validatedSkip = (validatedPage - 1) * validatedLimit;
+    const validatedLimit = [25, 50, 100, -1].includes(limit) ? limit : 100;
+    const validatedSkip = (validatedPage - 1) * (validatedLimit === -1 ? 0 : validatedLimit);
 
-    const result = await collection?.aggregate([
+    const baseQuery = [
       ...getAgeInYears(),
       {
         $match: {
@@ -79,15 +80,33 @@ export class GetSupercentenariansReader {
           ],
         },
       },
+    ];
+    if (validatedLimit === -1) {
+      const data = await collection?.aggregate([
+        ...baseQuery,
+        getSort(args.filters),
+        excludedFields,
+      ]).toArray();
+
+      return {
+        total: data.length,
+        data: data,
+      };
+    }
+
+    const dataPipeline = [
+      getSort(args.filters),
+      { $skip: validatedSkip },
+      { $limit: validatedLimit },
+      excludedFields,
+    ];
+
+    const result = await collection?.aggregate([
+      ...baseQuery,
       {
         $facet: {
           metadata: [{ $count: 'total' }],
-          data: [
-            getSort(args.filters),
-            { $skip: validatedSkip },
-            { $limit: validatedLimit },
-            excludedFields,
-          ],
+          data: dataPipeline,
         },
       },
     ]).toArray();

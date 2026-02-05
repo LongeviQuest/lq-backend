@@ -45,15 +45,16 @@ function exportData(req: Request, res: Response, result: PaginatedResult) {
     res.attachment('data.csv').send(csv);
   } else {
     const page = parseInt(req.query.page as string) || 1;
-    const limit = parseInt(req.query.limit as string) || 25;
-    const validatedLimit = [10, 25, 50, 100].includes(limit) ? limit : 25;
+    const limitParam = Array.isArray(req.query.limit) ? req.query.limit[0] : req.query.limit;
+    const limit = limitParam === 'all' ? -1 : (parseInt(limitParam as string) || 100);
+    const validatedLimit = [25, 50, 100, -1].includes(limit) ? limit : 100;
 
     res.json({
       count: result.total,
       content: result.data,
       page: page,
-      limit: validatedLimit,
-      totalPages: Math.ceil(result.total / validatedLimit),
+      limit: validatedLimit === -1 ? 'all' : validatedLimit,
+      totalPages: validatedLimit === -1 ? 1 : Math.ceil(result.total / validatedLimit),
     });
   }
 }
